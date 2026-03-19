@@ -1,4 +1,3 @@
-# gigshield-ai
 AI-powered parametric insurance platform for Swiggy delivery partners to protect weekly income from weather disruptions.
 
 # GigShield AI
@@ -24,6 +23,8 @@ GigShield AI is an AI-powered parametric insurance platform that protects Swiggy
 The system automatically monitors environmental conditions such as weather and pollution. When predefined conditions are met, it triggers an automatic claim and provides instant payout.
 
 This eliminates manual claims and ensures fast and reliable financial support.
+
+The system ensures zero paperwork and fully automated claim settlement using real-time parametric triggers.
 
 ## Workflow
 
@@ -62,9 +63,9 @@ These triggers enable automatic claim processing without manual intervention.
 
 ## AI/ML Integration
 
-- Risk prediction based on location and historical data
-- Dynamic premium adjustment based on predicted disruptions
-- Fraud detection using anomaly detection techniques
+- Risk prediction using historical weather and location-based data
+- Dynamic premium calculation based on predicted disruption probability
+- Fraud detection using anomaly detection (e.g., unusual claim frequency, location mismatch)
 
 ## Fraud Detection
 
@@ -72,6 +73,8 @@ These triggers enable automatic claim processing without manual intervention.
 - Detection of duplicate claims
 - Activity verification using platform data (mock)
 - Identification of unusual claim patterns
+  
+These checks ensure that only genuine income loss claims are processed.
 
 ## Tech Stack
 
@@ -87,3 +90,7 @@ APIs: Weather API (or mock), Maps API
 - Advanced machine learning models for better prediction
 - Payment gateway integration for real payouts
 - Mobile-first application for delivery workers
+
+## Conclusion
+
+GigShield AI provides a scalable and automated solution to protect gig workers from unpredictable income loss. By combining AI-driven risk assessment with parametric insurance triggers, the platform ensures fast, transparent, and reliable financial support.
