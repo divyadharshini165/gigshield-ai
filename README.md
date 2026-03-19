@@ -2,6 +2,8 @@ AI-powered parametric insurance platform for Swiggy delivery partners to protect
 
 # GigShield AI
 
+## Theme: AI-Powered Parametric Insurance for Gig Workers
+
 ## Problem Statement
 
 Swiggy delivery partners in Chennai often face income loss due to external disruptions such as heavy rain, extreme heat, and high pollution levels. These uncontrollable events reduce their working hours and limit delivery opportunities.
@@ -34,6 +36,7 @@ The system ensures zero paperwork and fully automated claim settlement using rea
 4. System monitors environmental conditions continuously
 5. If disruption conditions are met, claim is triggered automatically
 6. Income loss is calculated and payout is processed instantly
+7. Payout is credited directly to the worker’s account via integrated payment system (mock)
 
 
 ## Weekly Pricing Model
@@ -60,6 +63,8 @@ The premium adjusts weekly based on location risk and predicted disruptions.
 - Zone Restrictions: Road closures or restricted delivery zones
 
 These triggers enable automatic claim processing without manual intervention.
+
+All triggers are verified using external data sources to ensure transparency and prevent manipulation.
 
 ## AI/ML Integration
 
