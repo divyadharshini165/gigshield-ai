@@ -96,6 +96,43 @@ APIs: Weather API (or mock), Maps API
 - Payment gateway integration for real payouts
 - Mobile-first application for delivery workers
 
+## Adversarial Defense & Anti-Spoofing Strategy
+
+### 1. Differentiation
+
+To distinguish between genuine delivery partners and fraudulent users using GPS spoofing, the system uses multi-layer validation instead of relying solely on location data.
+
+The platform compares real-time movement patterns, delivery activity, and environmental consistency. A genuine worker will show natural movement, order activity, and time-based consistency, whereas spoofed users will show static or unrealistic behavior patterns.
+
+---
+
+### 2. Data Signals Used
+
+The system analyzes multiple data points beyond GPS:
+
+- Movement patterns (continuous vs static location)
+- Speed and route consistency (realistic delivery paths)
+- App activity (order acceptance, delivery logs)
+- Time spent in active delivery zones
+- Weather consistency (device sensor data vs reported conditions)
+- Device-level signals (sudden location jumps, emulator detection - mock)
+- Historical behavior patterns of the user
+
+This multi-signal approach helps detect coordinated fraud attempts such as group spoofing.
+
+---
+
+### 3. UX Balance for Honest Users
+
+To ensure genuine users are not unfairly penalized:
+
+- Claims are not immediately rejected but marked as "Under Review"
+- Partial payout can be provided while verification is ongoing
+- Users receive clear notifications explaining the delay
+- Repeated genuine behavior improves trust score and reduces future checks
+
+This ensures a balance between fraud prevention and user trust, maintaining a fair experience for honest delivery partners.
+
 ## Conclusion
 
 GigShield AI provides a scalable and automated solution to protect gig workers from unpredictable income loss. By combining AI-driven risk assessment with parametric insurance triggers, the platform ensures fast, transparent, and reliable financial support.
