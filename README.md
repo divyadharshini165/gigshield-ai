@@ -2,6 +2,8 @@ AI-powered parametric insurance platform for Swiggy delivery partners to protect
 
 # GigShield AI
 
+> AI-powered parametric insurance platform for gig workers
+
 ## Theme: AI-Powered Parametric Insurance for Gig Workers
 
 ## Problem Statement
