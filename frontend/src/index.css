@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #0f1923;
+  --panel: #16232f;
+  --card: #1c2f3e;
+  --border: #243447;
+  --accent: #00d4ff;
+  --green: #00e5a0;
+  --orange: #ff7849;
+  --red: #ff4d6d;
+  --muted: #7a9ab5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: #e2eaf2;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glowing card effect */
+.glow-card {
+  box-shadow: 0 0 0 1px var(--border), 0 4px 24px rgba(0,212,255,0.05);
+  transition: box-shadow 0.3s;
+}
+.glow-card:hover {
+  box-shadow: 0 0 0 1px rgba(0,212,255,0.3), 0 4px 32px rgba(0,212,255,0.12);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(0,212,255,0.4), rgba(0,229,160,0.2), rgba(0,212,255,0.1));
+  z-index: -1;
+}
+
+/* Pulse animation for active status */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Slide in animation */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #7a9ab5 25%, #00d4ff 50%, #7a9ab5 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Payout animation */
+@keyframes count-up {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.payout-reveal {
+  animation: count-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Rain animation for demo button */
+@keyframes rain-drop {
+  0% { transform: translateY(-10px); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(30px); opacity: 0; }
+}
+
+input, select {
+  background: var(--panel) !important;
+  border: 1px solid var(--border) !important;
+  color: #e2eaf2 !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+input:focus, select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.15) !important;
+}
+input::placeholder { color: var(--muted); }
+select option { background: var(--panel); }
+
+/* Glassmorphism */
+.glass {
+  background: rgba(15, 25, 35, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* Smooth hover animations */
+@keyframes smooth-scale {
+  from { transform: scale(1); }
+  to { transform: scale(1.02); }
+}
+.hover-scale:hover {
+  animation: smooth-scale 0.3s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--panel); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
